@@ -96,9 +96,9 @@ interface ILiquid is IERC20Metadata {
     function make(IERC20Metadata backing) external returns (ILiquid liquid);
 
     /// @notice Emitted on `heat` — backing tokens deposited, liquid minted.
-    event Heat(ILiquid indexed liquid, uint256 solids, uint256 pools, uint256 senders);
+    event Heat(ILiquid indexed liquid, uint256 solids, uint256 pools, uint256 senders, uint256 pooled);
     /// @notice Emitted on `cool` — liquid burned, backing tokens redeemed.
-    event Cool(ILiquid indexed liquid, uint256 liquids, uint256 hubs, uint256 solids);
+    event Cool(ILiquid indexed liquid, uint256 liquids, uint256 hubs, uint256 solids, uint256 pooled);
     /// @notice Emitted on `buy` — hub tokens spent for spoke tokens.
     event Buy(ILiquid indexed liquid, uint256 liquids, uint256 hubs);
     /// @notice Emitted on `sell` — spoke tokens sold for hub tokens.
