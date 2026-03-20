@@ -85,10 +85,10 @@ interface ILiquid is IERC20Metadata {
 
     /// @notice Check whether a spoke for the given backing token exists.
     /// @param backing The ERC-20 token to query.
-    /// @return cloned True if the spoke has already been deployed.
+    /// @return exists True if the spoke has already been deployed.
     /// @return home The deterministic CREATE2 address (valid even before deployment).
     /// @return salt The CREATE2 salt derived from the backing token address.
-    function made(IERC20Metadata backing) external view returns (bool cloned, address home, bytes32 salt);
+    function made(IERC20Metadata backing) external view returns (bool exists, address home, bytes32 salt);
 
     /// @notice Deploy a new spoke for the given backing token via deterministic CREATE2.
     /// @param backing The ERC-20 token the new spoke will wrap.
