@@ -92,7 +92,7 @@ interface ILiquid is IERC20Metadata {
 
     /// @notice Deploy a new spoke for the given backing token via deterministic CREATE2.
     /// @param backing The ERC-20 token the new spoke will wrap.
-    /// @return liquid The newly created spoke instance.
+    /// @return liquid The new or existing spoke instance.
     function make(IERC20Metadata backing) external returns (ILiquid liquid);
 
     /// @notice Emitted on `heat` — backing tokens deposited, liquid minted.
